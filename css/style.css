@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+   }
+body{  
+    /* background-image: url('https://live.staticflickr.com/2365/2387223292_cb73f529b7_b.jpg'); */
+    background-image:url('../image/bg2.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+   
+  }
+/* .top{ 
+    background-image:url('../image/districtwallpaper.jpg');
+    width: 100%;
+    height:670px;
+    background-size: cover;
+}  */
+
+.explore{
+    width:400px;
+    padding-top: 80px;
+    float: right ;
+    margin-right:200px;
+}
+.explore h2{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.explore p{
+    color: white;
+    font-family: cursive;
+    
+
+}
