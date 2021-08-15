@@ -1,29 +1,22 @@
 *{
     padding: 0;
     margin: 0;
-   }
-body{  
-    /* background-image: url('https://live.staticflickr.com/2365/2387223292_cb73f529b7_b.jpg'); */
-    background-image:url('../image/bg2.jpg');
-    background-repeat: no-repeat; 
-    background-size: cover;
-   
-  }
-/* .top{ 
-    background-image:url('../image/districtwallpaper.jpg');
-    width: 100%;
-    height:670px;
-    background-size: cover;
-}  */
+   } 
+body{
+    overflow-x: hidden;
+}
+.slide1{
+  background-color: black;
+  display:inline-block;
+}
 
 .explore{
-    width:400px;
-    padding-top: 80px;
-    float: right ;
-    margin-right:200px;
+    background-color: black;
+    padding-top: 50px;
 }
-.explore h2{
+h1,h2{
     color: white;
+    font-style:bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
@@ -33,3 +26,16 @@ body{
     
 
 }
+.carousel-item img{
+    height:500px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+.card:hover img{    
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+ 

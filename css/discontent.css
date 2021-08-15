@@ -1,0 +1,9 @@
+body {
+    position: relative;
+  }
+.carousel-item img{
+    height: 500px;
+}
+/* .nav-link.active{
+    background-color: blue;
+} */
