@@ -3,7 +3,33 @@ body {
   }
 .carousel-item img{
     height: 500px;
+  
 }
-/* .nav-link.active{
-    background-color: blue;
-} */
+body{
+    overflow-x: hidden;
+}
+.slide1{
+  background-color: black;
+}
+.explore{
+    background-color: black;
+    /* padding-top: 70px; */
+}
+.explore img{
+   height: 500px;
+}
+.intro{
+  padding-left:30px ;
+  padding-right:30px ;
+}
+.featured{
+  padding-left:10% ;
+  padding-right:10% ; 
+}
+.tour{
+  background-size: cover;
+}
+.foot{
+  background-color:#e3e7f1;
+  width: 100%;
+}
