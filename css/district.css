@@ -1,7 +1,20 @@
 *{
-   margin: 0%;
-   padding: 0%; 
+  padding: 0;
+  margin: 0;
+ } 
+body{
+  overflow-x: hidden;
 }
+.foot{
+  background-color:#e3e7f1;
+  width: 100%;
+}
+.fa{
+  font-size:30px !important;
+  margin-right: 10px;
+}
+
+/* above for all css */
  h3{
    font-style:bold;
    font-family:'Times New Roman', Times, serif;

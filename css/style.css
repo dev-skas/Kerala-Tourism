@@ -5,6 +5,16 @@
 body{
     overflow-x: hidden;
 }
+.foot{
+    background-color:#e3e7f1;
+    width: 100%;
+}
+.fa{
+    font-size:30px !important;
+    margin-right: 10px;
+}
+
+/* above for all css */
 .slide1{
   background-color: black;
   display:inline-block;
@@ -38,8 +48,6 @@ h1,h2{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-.foot{
-    background-color:#e3e7f1;
-    width: 100%;
-}
+
+
  
