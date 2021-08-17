@@ -75,6 +75,6 @@ h1{
       margin-bottom: 10px;
   }
   body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 }

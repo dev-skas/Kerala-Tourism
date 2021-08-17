@@ -17,7 +17,7 @@ body{
 /* above for all css */
 .slide1{
   background-color: black;
-  /* display:inline-block; */
+  display:inline-block;
 }
 
 .explore{
