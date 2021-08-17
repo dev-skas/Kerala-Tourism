@@ -22,6 +22,7 @@ body{
 }
 
 .card{
+  height: 210px;
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    
 }
@@ -58,6 +59,7 @@ body{
    text-align: center;
  }
  .card img{    
+   height: 150px;
   animation: shake 0.5s;
 }@keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
