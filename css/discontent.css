@@ -18,7 +18,7 @@ h1{
 }
 .slide1{
   background-color: black;
-  /* display:inline-block; */
+  display:inline-block;
   width: 100%;
 }
 
@@ -27,8 +27,7 @@ h1{
   padding-right:30px ;
 }
 .intro h8{
-  font-family: cursive;
-  font-style: oblique;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .featured{
   padding-left:10% ;
