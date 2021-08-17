@@ -18,6 +18,8 @@ h1{
 }
 .slide1{
   background-color: black;
+  display:inline-block;
+  width: 100%;
 }
 
 .intro{
