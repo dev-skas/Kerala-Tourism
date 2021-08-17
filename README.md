@@ -16,5 +16,5 @@
         <br><br>
         
    
- <a href="https://syamjith-krishna.github.io/Kerala-Tourism/"> Preview </a>
+ <a  href="https://syamjith-krishna.github.io/Kerala-Tourism/" target="_blank"> Preview </a>
   

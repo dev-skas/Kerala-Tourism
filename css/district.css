@@ -90,5 +90,8 @@ body{
   }
   body{
     overflow-x: hidden;
-}
+    }
+    .btn{
+      margin-bottom:10px;
+  }
 }
