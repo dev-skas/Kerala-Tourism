@@ -74,4 +74,7 @@ h1{
   form{
       margin-bottom: 10px;
   }
+  body{
+    overflow-x: hidden;
+}
 }
