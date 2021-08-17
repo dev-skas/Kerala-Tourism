@@ -54,7 +54,24 @@ h1{
 #wheretogo .card{
   height: 500px;
 }
-.btn{
+
+.btn-outline-success{
   position: absolute;
  bottom:10px;
+}
+.card{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .carousel-item img{
+      height:200px;
+  }
+  .col-sm-2{
+      display: none !important;
+  }
+  form{
+      margin-bottom: 10px;
+  }
 }

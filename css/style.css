@@ -39,6 +39,11 @@ h1,h2{
 .carousel-item img{
     height:500px;
 }
+.card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
 .card:hover{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
@@ -48,6 +53,16 @@ h1,h2{
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
-
+@media only screen and (max-width: 600px) {
+    .carousel-item img{
+        height:200px;
+    }
+    .col-sm-2{
+        display: none !important;
+    }
+    form{
+        margin-bottom: 10px;
+    }
+  }
 
  
