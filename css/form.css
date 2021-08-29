@@ -41,3 +41,44 @@ label{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.hide{
+display: none;
+
+}
+#message {
+    /* display:none; */
+    height: 390px;
+     width: 300px;
+    /* background: #f1f1f1; */
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+    
+  }
+  #message p {
+    /* padding: 10px 35px; */
+    font-size: 18px;
+    text-align: left;
+  }
+  /* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -10px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -10px;
+    content: "✖";
+  }

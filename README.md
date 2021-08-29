@@ -10,6 +10,8 @@
   <li>HTML/CSS with Bootstrap</li>
   <li>Total: 18 Pages</li>
   <li>Animations</li> 
+  <li>carousal</li> 
+
     </ul>
     <br><br>
     <i> All the image included in this project is collected from various online sources</i>
