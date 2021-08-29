@@ -12,10 +12,11 @@
   <li>Animations</li> 
   <li>carousal</li> 
 
-    </ul>
-    <br><br>
-    <i> All the image included in this project is collected from various online sources</i>
-        <br><br>
+  </ul>
+
+  <br><br>
+  <i> All the image included in this project is collected from various online sources</i>
+  <br><br>
         
    
  <a  href="https://dev-skas.github.io/Kerala-Tourism/" target="_blank"> Preview </a>
