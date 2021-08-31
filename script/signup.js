@@ -10,6 +10,9 @@ var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
+var strength = document.getElementById("strength");
+
+
 
 
 //   Email Section
@@ -35,18 +38,26 @@ email.onkeyup = function(){
 
 password.onkeyup = function(){
 
+ 
+ var i =0;
+
     var lowerCaseLetters = /[a-z]/g;
   if(password.value.match(lowerCaseLetters)) {  
+    i++;
+
     letter.classList.remove("invalid");
     letter.classList.add("valid");
   } else {
     letter.classList.remove("valid");
     letter.classList.add("invalid");
+   
   }
   
   // Validate capital letters
   var upperCaseLetters = /[A-Z]/g;
-  if(password.value.match(upperCaseLetters)) {  
+  if(password.value.match(upperCaseLetters)) { 
+    i++;
+   
     capital.classList.remove("invalid");
     capital.classList.add("valid");
   } else {
@@ -56,7 +67,9 @@ password.onkeyup = function(){
 
   // Validate numbers
   var numbers = /[0-9]/g;
-  if(password.value.match(numbers)) {  
+  if(password.value.match(numbers)) { 
+    i++;   
+    
     number.classList.remove("invalid");
     number.classList.add("valid");
   } else {
@@ -66,6 +79,7 @@ password.onkeyup = function(){
   
   // Validate length
   if(password.value.length >= 8) {
+    i++;    
     length.classList.remove("invalid");
     length.classList.add("valid");
   } else {
@@ -74,10 +88,23 @@ password.onkeyup = function(){
   }
 
 
+
+  if (i==1) {
+    strength.innerText = "- Poor";
+    strength.style.color ="red";
+    } else if (i==2) {
+      strength.innerText = "- Medium";
+     strength.style.color ="orange";
+      }if (i==4) {
+          strength.innerText = "- Strong";
+     strength.style.color ="green";
+
+      }
+
 }
 
 password.onfocus = function(){
- 
+   strength.classList.remove("hide");
     alerts.classList.remove("hide");
     lottie.classList.add("hide");
     
@@ -87,6 +114,8 @@ password.onfocus = function(){
 password.onblur = function() {
     alerts.classList.add("hide");
     lottie.classList.remove("hide");
+    strength.classList.add("hide");
+    
     
 
 }
