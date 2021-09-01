@@ -5,9 +5,7 @@
     <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="../css/form.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="../image/ico.png">
+   <link rel="icon" href="../image/ico.png">
     <title>Kerala Tourism</title>
 
 </head>
@@ -30,41 +28,54 @@
             <h6> Already have an account? <a href="../page/login.html"> Log In</a></h3>
         </div>
         <div class="col-sm">
-            
-            <form class="row g-3">
+        
+            <form id="form" action="sucess.html" onsubmit="return check();"  class="row g-3">
              
                 <div class="col-sm-12">
                   <label id="emailcheck" for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                  <input class="form-control" id="inputEmail" placeholder="Email">
+                 
                 </div>
                 <div class="col-sm-12">
-                  <label for="inputPassword5" class="form-label">Password </label> <span class="hide" id="strength"></span>
+                  <label id="passcheck" for="inputPassword5" class="form-label">Password </label> <span class="hide" id="strength"></span>
+                  
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" >
+                  <div id="myProgress">  </div>               
+                  
                 </div>
+                <div class="col-sm-12">
+                  <div class="form-check">
+                    <input class="form-check-input" onclick="reveal();" type="checkbox" id="showpass">
+                    <label  class="form-check-label">
+                     Show Password
+                    </label>
+                  </div>
+                </div>
+                
                 <div class="col-sm-12">
                     <label id="retypepass" for="inputPassword4" class="form-label">Retype Password</label>
                     <input type="password" class="form-control" id="inputPassword2" placeholder="Retype-password" >
                   </div>
                 <div class="col-sm-12">
-                  <label for="inputAddress" class="form-label">Address</label>
+                  <label id="adresscheck" for="inputAddress" class="form-label">Address</label>
                   <input type="text" class="form-control" id="inputAddress" placeholder="Technopark, Thiruvananthapuram,">
                 </div>
                 <div class="col-sm-12">
                   <label id="phonecheck" for="inputAddress2" class="form-label">Phone Number</label>
-                  <input type="text" class="form-control" id="inputNumber" placeholder="+91">
+                  <input type="text" class="form-control" id="inputNumber" placeholder="XXX.XXX.XXXX">
                 </div>
                 
                 <div class="col-sm-12">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
+                    <label id="checklabel" class="form-check-label" for="gridCheck">
                      Agree privacy policy
                     </label>
                   </div>
                 </div>
                 <div class="col-sm-12">
-                  <button type="submit" class="btn btn-primary">Sign Up For Free</button>
-                </div>
+                  <button type="submit" id="submit" class="btn btn-primary" >Sign Up For Free</button>
+                                </div>
                     </form>  
                            
                 

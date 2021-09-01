@@ -16,15 +16,15 @@
     <div class="login">
    
                                 
-            <form class="row g-3">
+            <form action="sucess.html"  onsubmit="return check();" class="row g-3">
 
                 <div class="col-sm-12">
-                  <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+                  <label id="emailerror" for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" >
                 </div>
                 <div class="col-sm-12">
-                  <label for="inputPassword4" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="inputPassword4" placeholder="Password" required>
+                  <label id="passerror" for="inputPassword4" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" >
                 </div>
                 
                 
@@ -45,6 +45,6 @@
                 <h6> Need an account? <a href="../page/signup.html">Sign Up</a></h3>              
                 </form>      
     </div>
- 
+ <script src="../script/login.js"></script>
 </body>  
 </html>

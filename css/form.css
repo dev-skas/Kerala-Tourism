@@ -9,6 +9,7 @@ body{
 }
 label{
     color: black;
+    /* font-weight: bold; */
 }
 .signup{
     margin-top: 100px;
@@ -19,7 +20,7 @@ label{
     padding-bottom: 5px;
     /* margin: 0; */
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -20%);
 }
@@ -84,4 +85,24 @@ display: none;
   }
   #strength{
     font-weight: bold;
+  }
+  .poor{
+    height:2px;
+    width: 25%;
+    background-color:red ;
+  }
+  .medium{
+    height:2px;
+    width: 63%;
+    background-color:orange ;
+  }
+  .strong{
+    height:2px;
+    width: 100%;
+    background-color:green ;
+  }
+#myProgress{
+  height:2px;
+  /* width: 100%; */
+    /* background-color: white; */
   }

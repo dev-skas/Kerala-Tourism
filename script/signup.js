@@ -1,3 +1,4 @@
+var form = document.getElementById("form");
 var email = document.getElementById("inputEmail");
 var password = document.getElementById("inputPassword");
 var retype = document.getElementById("inputPassword2");
@@ -5,22 +6,125 @@ var address = document.getElementById("inputAddress");
 var phone = document.getElementById("inputNumber");
 var alerts = document.getElementById("message");
 var lottie = document.getElementById("lottie");
+var checkbox = document.getElementById("gridCheck");
+
+
 
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 var strength = document.getElementById("strength");
+var progress = document.getElementById("myProgress");
+
+
+// expression
+
+var emailtype = /^([\w\d\.-]+)@([\w\d.-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+
+// /^([\w\d\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(\.[a-z]{2,3})?$/;
+
+var phoneno =/^(\d{3})[-. ]?(\d{3})[-. ]?(\d{4})$/;
+
+// /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+var passtype = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/;
+
+// form.addEventListener('submit', event => {
+//   event.preventDefault();
+//   // actual logic, e.g. validate the form
+//   check();
+//   console.log('Form submission cancelled.');
+// });
 
 
 
 
+function check(){
+
+  var error =0; //variable for final submission
+
+//email check
+
+        if (email.value.trim()=="") {
+          document.getElementById("emailcheck").innerText="You can't leave this field blank";
+          document.getElementById("emailcheck").style.color="red";
+          error =1;
+        }else if (emailtype.test(email.value)==false) {
+          document.getElementById("emailcheck").innerText="Please enter a valid email address";
+          document.getElementById("emailcheck").style.color="red";
+           error =1;
+        } 
+
+//pssword  check
+
+        if (password.value.trim()=="") {
+          document.getElementById("passcheck").innerText="You can't leave this field blank";
+          document.getElementById("passcheck").style.color="red";
+           error =1;
+        }else   if (passtype.test(password.value)==false) {
+          document.getElementById("passcheck").innerText="Password not accepted";
+          document.getElementById("passcheck").style.color="red";
+           error =1;
+        }
+
+ //retype password check
+
+         if (retype.value.trim()=="") {
+          document.getElementById("retypepass").innerText="You can't leave this field blank";
+          document.getElementById("retypepass").style.color="red";
+           error =1;
+        }else if (retype.value!=password.value) {
+          document.getElementById("retypepass").innerText="Your password needs to be same";
+          document.getElementById("retypepass").style.color="red";
+           error =1;
+        } 
+        
+//adress check        
+
+        if (address.value.trim()=="") {
+          document.getElementById("adresscheck").innerText="You can't leave this field blank";
+          document.getElementById("adresscheck").style.color="red";
+           error =1;
+        }
+
+ //phone  check
+
+         if (phone.value.trim()=="") {
+          document.getElementById("phonecheck").innerText="You can't leave this field blank";
+          document.getElementById("phonecheck").style.color="red";
+           error =1;
+        }else  if  (phoneno.test(phone.value)==false) {
+          document.getElementById("phonecheck").innerText="Please enter a valid phone number";
+          document.getElementById("phonecheck").style.color="red";
+           error =1;
+        } 
+
+//check box check  
+
+        if (checkbox.checked ==false) {
+          
+          document.getElementById("checklabel").style.color="red";  
+          error =1;
+
+        }  else{
+          document.getElementById("checklabel").style.color="black";  
+        }
+
+// final submission  check
+
+        if (error==1) {
+
+          return false; 
+
+        } else {
+
+          return true;
+        }
+}
+     
+      
 //   Email Section
-
-var emailtype =  /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3})?$/;
-
-
-
 
 email.onkeyup = function(){
 
@@ -38,6 +142,7 @@ email.onkeyup = function(){
 
 password.onkeyup = function(){
 
+
  
  var i =0;
 
@@ -54,6 +159,7 @@ password.onkeyup = function(){
   }
   
   // Validate capital letters
+
   var upperCaseLetters = /[A-Z]/g;
   if(password.value.match(upperCaseLetters)) { 
     i++;
@@ -66,6 +172,7 @@ password.onkeyup = function(){
   }
 
   // Validate numbers
+
   var numbers = /[0-9]/g;
   if(password.value.match(numbers)) { 
     i++;   
@@ -78,6 +185,7 @@ password.onkeyup = function(){
   }
   
   // Validate length
+
   if(password.value.length >= 8) {
     i++;    
     length.classList.remove("invalid");
@@ -88,36 +196,53 @@ password.onkeyup = function(){
   }
 
 
+  // progreesbar section
 
-  if (i==1) {
-    strength.innerText = "- Poor";
-    strength.style.color ="red";
-    } else if (i==2) {
-      strength.innerText = "- Medium";
-     strength.style.color ="orange";
-      }if (i==4) {
-          strength.innerText = "- Strong";
-     strength.style.color ="green";
+    if (i==0) {
 
-      }
+        strength.innerText = "";
+        progress.classList.remove("poor");
+        progress.classList.remove("medium");
+        progress.classList.remove("strong");
+
+    }else if (i==1) {
+        strength.innerText = "- Poor";
+        strength.style.color ="red";
+        progress.classList.add("poor");
+        progress.classList.remove("medium");
+        progress.classList.remove("strong");
+
+    }else if (i==2) {
+        strength.innerText = "- Medium";
+        strength.style.color ="orange";
+        progress.classList.add("medium");
+        progress.classList.remove("strong");
+    }else if (i==3) {
+        strength.innerText = "- Medium";
+        progress.classList.add("medium");
+        progress.classList.remove("strong");
+      
+    }else if (i==4) {
+        strength.innerText = "- Strong";
+        strength.style.color ="green";
+        progress.classList.add("strong");
+
+    }
 
 }
 
 password.onfocus = function(){
-   strength.classList.remove("hide");
-    alerts.classList.remove("hide");
-    lottie.classList.add("hide");
-    
-
+     document.getElementById("passcheck").innerText="Password";
+     document.getElementById("passcheck").style.color="black";
+     strength.classList.remove("hide");
+     alerts.classList.remove("hide");
+     lottie.classList.add("hide");
 }
 
 password.onblur = function() {
     alerts.classList.add("hide");
     lottie.classList.remove("hide");
     strength.classList.add("hide");
-    
-    
-
 }
 
 // retype password section
@@ -132,12 +257,18 @@ retype.onkeyup = function(){
           document.getElementById("retypepass").innerText ="Incorrect password";
           document.getElementById("retypepass").style.color = "red";
       }
-   
+}
+
+// address section
+
+address.onfocus = function(){
+  document.getElementById("adresscheck").innerText="Address";
+  document.getElementById("adresscheck").style.color="black";
+
 }
 
 // phone no  section
 
-var phoneno =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
 phone.onkeyup = function(){
 
@@ -150,3 +281,23 @@ phone.onkeyup = function(){
       }
    
 }
+
+//show pasword section
+
+function reveal(){
+  if (document.getElementById("showpass").checked== true) {
+  
+    password.setAttribute("type", "text");
+  
+  }else{
+    password.setAttribute("type", "password");
+
+  }
+}
+
+ 
+
+
+
+
+
